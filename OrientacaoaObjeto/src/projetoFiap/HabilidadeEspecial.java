@@ -10,5 +10,8 @@ public class HabilidadeEspecial {
         this.custoEnergia = custoEnergia;
         this.habilitada = habilitada;
     }
+    public void ativarHabilidade() {
+    	habilitada = true;
+    }
     
 }

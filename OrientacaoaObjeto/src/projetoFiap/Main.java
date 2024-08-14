@@ -8,8 +8,7 @@ public class Main {
 	        PersonagemMagico personagem = new PersonagemMagico();
 	        int op;
 	        do {
-	            System.out.println("Escolha uma opção:\n 1-Cadastrar Personagem\n 2-Exibir Personagem\n 0-Sair");
-	            op = sc.nextInt();
+	        	System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n3-Realizar ataque \n4-Aumentar energia \n5-Ativar Habilidade Especial\n6-Ativar habilidade especial \n0-Sair");	            op = sc.nextInt();
 
 	            switch (op) {
 	                case 1:
@@ -37,6 +36,23 @@ public class Main {
 	                    System.out.println("Nome: " + personagem.nome + " Poder: " + personagem.poderMagico + " Nível energia: " + personagem.nivelEnergia);
 	                    System.out.println("Habilidade: " + personagem.habilidade.nome + " Custo energia: " + personagem.habilidade.custoEnergia + " Habilitada: " + personagem.habilidade.habilitada);
 	                    break;
+	                case 3:
+	                    System.out.println("Digite o nome do ataque:");
+	                    String ataque = sc.next() + sc.nextLine();
+	                    personagem.atacar(ataque);
+	                    break;
+	                case 4:
+	                    System.out.println("Digite a quantidade de energia:");
+	                    int qtd = sc.nextInt();
+	                    int nivelAtual = personagem.aumentarEnergia(qtd);
+	                    System.out.println("Nível atual de energia: " + nivelAtual);
+	                    break;
+	                case 5:
+	                    personagem.ativarHabilidadeEspecial();
+	                    break;
+	                case 6:
+	                	personagem.habilidade.ativarHabilidade();
+	                	break;
 	                case 0:
 	                    System.out.println("Finalizando o programa");
 	                default:
