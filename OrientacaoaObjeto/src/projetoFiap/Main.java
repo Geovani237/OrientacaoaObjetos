@@ -8,7 +8,7 @@ public class Main {
 	        PersonagemMagico personagem = new PersonagemMagico();
 	        int op;
 	        do {
-	        	System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n3-Realizar ataque \n4-Aumentar energia \n5-Ativar Habilidade Especial\n6-Ativar habilidade especial \n0-Sair");	            op = sc.nextInt();
+	        	System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n3-Realizar ataque \n4-Aumentar energia \n5-Ativar Habilidade Especial\n6-Habilitar habilidade especial \n0-Sair");	            op = sc.nextInt();
 
 	            switch (op) {
 	                case 1:
