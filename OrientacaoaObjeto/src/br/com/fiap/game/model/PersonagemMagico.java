@@ -45,32 +45,36 @@ public class PersonagemMagico {
 		return nome;
 	}
 
-	public void setNome(String nome) {
+	public PersonagemMagico setNome(String nome) {
 		this.nome = nome;
+		return this;
 	}
 
 	public String getPoderMagico() {
 		return poderMagico;
 	}
 
-	public void setPoderMagico(String poderMagico) {
+	public PersonagemMagico setPoderMagico(String poderMagico) {
 		this.poderMagico = poderMagico;
+		return this;
 	}
 
 	public int getNivelEnergia() {
 		return nivelEnergia;
 	}
 
-	public void setNivelEnergia(int nivelEnergia) {
+	public PersonagemMagico setNivelEnergia(int nivelEnergia) {
 		this.nivelEnergia = nivelEnergia;
+		return this;
 	}
 
 	public HabilidadeEspecial getHabilidade() {
 		return habilidade;
 	}
 
-	public void setHabilidade(HabilidadeEspecial habilidade) {
+	public PersonagemMagico setHabilidade(HabilidadeEspecial habilidade) {
 		this.habilidade = habilidade;
+		return this;
 	}
     
     

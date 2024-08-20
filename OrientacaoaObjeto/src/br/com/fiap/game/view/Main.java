@@ -22,9 +22,7 @@ public class Main {
 	                    String poder =  sc.next() + sc.nextLine();
 	                    System.out.println("Digite o nível de energia:");
 	                    int energia = sc.nextInt();
-	                    personagem.setNome(nome);
-	                    personagem.setNivelEnergia(energia);;
-	                    personagem.setPoderMagico(poder);;
+	                    personagem.setNome(nome).setNivelEnergia(energia).setPoderMagico(poder);
 	                    System.out.println("Digite o nome da habilidade especial:");
 	                    String nomeHabilidade = sc.next() + sc.nextLine();
 	                    System.out.println("Digite o custo de energia para usar a habilidade especial:");
