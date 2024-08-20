@@ -1,5 +1,8 @@
-package projetoFiap;
+package br.com.fiap.game.view;
 import java.util.Scanner;
+
+import br.com.fiap.game.model.HabilidadeEspecial;
+import br.com.fiap.game.model.PersonagemMagico;
 public class Main {
 
 	    public static void main(String[] args) {

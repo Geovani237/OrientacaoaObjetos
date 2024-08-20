@@ -1,4 +1,4 @@
-package projetoFiap;
+package br.com.fiap.game.model;
 
 public class PersonagemMagico {
 
