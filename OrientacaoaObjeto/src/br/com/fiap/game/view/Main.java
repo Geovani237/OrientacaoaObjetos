@@ -1,4 +1,5 @@
 package br.com.fiap.game.view;
+import br.com.fiap.game.model.PersonagemMagico;
 import java.util.Scanner;
 
 import br.com.fiap.game.model.HabilidadeEspecial;
@@ -21,9 +22,9 @@ public class Main {
 	                    String poder =  sc.next() + sc.nextLine();
 	                    System.out.println("Digite o nível de energia:");
 	                    int energia = sc.nextInt();
-	                    personagem.nome = nome;
-	                    personagem.nivelEnergia = energia;
-	                    personagem.poderMagico = poder;
+	                    personagem.setNome(nome);
+	                    personagem.setNivelEnergia(energia);;
+	                    personagem.setPoderMagico(poder);;
 	                    System.out.println("Digite o nome da habilidade especial:");
 	                    String nomeHabilidade = sc.next() + sc.nextLine();
 	                    System.out.println("Digite o custo de energia para usar a habilidade especial:");
@@ -33,11 +34,11 @@ public class Main {
 	                    //Criando o objeto que representa a habilidade especial com os valores informados pelo usuário
 	                    HabilidadeEspecial habilidadeEspecial = new HabilidadeEspecial(nomeHabilidade, nivelEnergia, ativada);
 	                    //Atribuindo o objeto habilidade especial ao personagem
-	                    personagem.habilidade = habilidadeEspecial;
+	                    personagem.setHabilidade(habilidadeEspecial);
 	                    break;
 	                case 2:
-	                    System.out.println("Nome: " + personagem.nome + " Poder: " + personagem.poderMagico + " Nível energia: " + personagem.nivelEnergia);
-	                    System.out.println("Habilidade: " + personagem.habilidade.nome + " Custo energia: " + personagem.habilidade.custoEnergia + " Habilitada: " + personagem.habilidade.habilitada);
+	                    System.out.println("Nome: " + personagem.getNome() + " Poder: " + personagem.getPoderMagico() + " Nível energia: " + personagem.getNivelEnergia());
+	                    System.out.println("Habilidade: " + personagem.getHabilidade().getNome() + " Custo energia: " + personagem.getHabilidade().getCustoEnergia() + " Habilitada: " + personagem.getHabilidade().isHabilitada());
 	                    break;
 	                case 3:
 	                    System.out.println("Digite o nome do ataque:");
@@ -54,7 +55,7 @@ public class Main {
 	                    personagem.ativarHabilidadeEspecial();
 	                    break;
 	                case 6:
-	                	personagem.habilidade.ativarHabilidade();
+	                	personagem.getHabilidade().ativarHabilidade();
 	                	break;
 	                case 0:
 	                    System.out.println("Finalizando o programa");

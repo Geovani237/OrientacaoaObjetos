@@ -3,13 +3,13 @@ package br.com.fiap.game.model;
 public class PersonagemMagico {
 
     //Atributos
-    String nome;
-    String poderMagico;
-    int nivelEnergia;
+    private String nome;
+    private String poderMagico;
+    private int nivelEnergia;
 
     HabilidadeEspecial habilidade;
 
-    PersonagemMagico() {
+    public PersonagemMagico() {
 
     }
 
@@ -31,13 +31,47 @@ public class PersonagemMagico {
     }
     
     public void ativarHabilidadeEspecial(){
-        if (!habilidade.habilitada){
+        if (!habilidade.isHabilitada()){
             System.out.println("Habilidade especial não está ativada");
-        } else if (nivelEnergia >= habilidade.custoEnergia){
-            System.out.println("Ativando a habilidade: " + habilidade.nome);
-            nivelEnergia -= habilidade.custoEnergia;
+        } else if (nivelEnergia >= habilidade.getCustoEnergia()){
+            System.out.println("Ativando a habilidade: " + habilidade.getNome());
+            nivelEnergia -= habilidade.getCustoEnergia();
         } else {
             System.out.println(nome + "está sem energia para a habilidade especial");
         }
     }
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getPoderMagico() {
+		return poderMagico;
+	}
+
+	public void setPoderMagico(String poderMagico) {
+		this.poderMagico = poderMagico;
+	}
+
+	public int getNivelEnergia() {
+		return nivelEnergia;
+	}
+
+	public void setNivelEnergia(int nivelEnergia) {
+		this.nivelEnergia = nivelEnergia;
+	}
+
+	public HabilidadeEspecial getHabilidade() {
+		return habilidade;
+	}
+
+	public void setHabilidade(HabilidadeEspecial habilidade) {
+		this.habilidade = habilidade;
+	}
+    
+    
 }
